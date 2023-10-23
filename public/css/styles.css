@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: "soleil", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  h4 {
+    font-family: "soleil", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+  }
+  h5 {
+    font-family: "soleil", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000000;
+  }
+  h6 {
+    font-family: "soleil", sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    color: #000000;
+    opacity: 60%;
+  }
+  
+  h2 {
+    font-family: "bw-gradual", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000;
+  }
+.header__container{
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20x;
+
+
+}
+.menu-burger {
+    width: 30px;
+    height: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+.barre {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.menu-burger.open .barre:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-burger.open .barre:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-burger.open .barre:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-vertical {
+    position: fixed;
+    top: -100%; /* Le menu est initialement en dehors de la vue */
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    transition: top 0.5s; /* Animation pour déplacer le menu */
+}
+
+.menu-burger.open ~ .menu-vertical {
+    top: 0; /* Fait glisser le menu depuis le haut de la page */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Affiche les éléments du menu horizontalement */
+    justify-content: center;
+}
+
+li {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-family: soleil;
+    font-size: 20px;
+}
+
+.croix {
+    display: none; /* Initialement masquée */
+}
+
+.menu-burger.open ~ .menu-vertical .croix {
+    display: block; /* Affiche la croix lorsque le menu est ouvert */
+}
+
+.barre1,
+.barre2 {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+  .search-container {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #000000;
+    opacity: 60%;
+    border-radius: 40px;
+    width: 295px;
+    margin-right: 68px;
+  }
+  .logo__yearbook__header{
+    width: 136px;
+    height: 40px;
+
+  }
+  #search-box {
+    border-color: #000000;
+    padding: 10px;
+    width: 295px;
+    font-size: 16px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+.con{
+    background-color: #e5afaf;
+    height:2000px;
+}
