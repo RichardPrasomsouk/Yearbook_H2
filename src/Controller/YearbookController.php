@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class YearbookController extends AbstractController
 {
-    #[Route('/yearbook', name: 'app_yearbook')]
+    #[Route('/', name: 'app_yearbook')]
     public function index(): Response
     {
         return $this->render('pages/landing_page/side_by_side_img.html.twig', [

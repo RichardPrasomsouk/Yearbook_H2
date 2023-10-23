@@ -5,7 +5,9 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         <link rel="stylesheet" href="{{ asset('css/side_by_side.css') }}" />
-
+        <link rel="stylesheet" href="{{ asset('css/burger_menu.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
+        <script src = "{{ asset('js/header.js') }}" defer></script>
         {% block stylesheets %}
         {% endblock %}
 
@@ -13,8 +15,9 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
 
-        {# % include '_partials/'% #}
+        {% include '_partials/header.html.twig' %}
+        {% block body %}{% endblock %}
+        {% include '_partials/footer.html.twig' %}
     </body>
 </html>

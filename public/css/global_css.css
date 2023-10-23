@@ -1,0 +1,36 @@
+h1 {
+  font-family: "soleil", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000000;
+}
+
+h4 {
+  font-family: "soleil", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #000000;
+}
+h4.footer__beginning {
+  font-family: "Bw grudual"
+}
+h5 {
+  font-family: "soleil", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000000;
+}
+h6 {
+  font-family: "soleil", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #000000;
+  opacity: 60%;
+}
+
+h2 {
+  font-family: "bw-gradual", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000000;
+}

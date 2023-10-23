@@ -1,0 +1,100 @@
+
+  .footer__beginning {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .category--column {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .further--column {
+    display: flex;
+    flex-direction: column;
+  }
+  .social__media--icon {
+    margin: 10px 10px 10px 10px;
+  }
+  .social__media__footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .social__media--column {
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+  }
+  .social__media--left--column {
+    display: flex;
+    flex-direction: column;
+  }
+  .social__media--right--column {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__end {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .line__footer {
+    display: flex;
+    align-self: center;
+    border-top: 1px solid;
+    width: 1044px;
+    border-color: black;
+    opacity: 60%;
+  }
+  .footer__mentions {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  @media screen and (max-width: 1344px) {
+    .side__by__side__image {
+      width: 568px;
+      height: 351px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .side__by__side__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .side__by__side__image {
+      margin-bottom: 40px;
+    }
+    .logo_yearbook {
+      width: 112px;
+      height: 139px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .side__by__side__image {
+      width: 432.5px;
+      height: 266.25px;
+    }
+    .logo_yearbook {
+      width: 60px;
+      height: 77px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+    h5 {
+      font-size: 12px;
+    }
+    .social__media--icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .side__by__side__image {
+      width: 346px;
+      height: 213px;
+    }
+  }
+  

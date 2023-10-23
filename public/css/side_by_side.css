@@ -2,7 +2,7 @@ body{
     margin:0;
     padding:0;
 }
-
+    
 .side__by__side__container{
     display: flex;
     width:100%;
