@@ -7,4 +7,10 @@
         {{ form_widget(form) }}
         <button type="submit">Se connecter</button>
     </form>
+
+    {% if app.user %}
+        <p>Welcome, {{ app.user.username }}!</p>
+    {% else %}
+        <p>You are not logged in.</p>
+    {% endif %}
 {% endblock %}

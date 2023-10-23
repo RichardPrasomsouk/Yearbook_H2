@@ -19,8 +19,8 @@ security:
         login_path: app_login
         check_path: app_login
         default_target_path: app_dashboard
-        username_parameter: _username
-        password_parameter: _password
+        username_parameter: login_form[username]
+        password_parameter: login_form[password]
       logout:
         path: app_logout
         target: app_homepage
