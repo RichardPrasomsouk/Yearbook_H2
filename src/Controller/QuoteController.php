@@ -36,7 +36,7 @@ class QuoteController extends AbstractController
             return $this->redirectToRoute('app_quote_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('quote/new.html.twig', [
+        return $this->render('quote/new_block.html.twig', [
             'quote' => $quote,
             'form' => $form,
         ]);

@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    <script src="{{ asset('js/fetch.js') }}" defer> </script>
+{% endblock %}
+
 {% block title %}Quote index{% endblock %}
 
 {% block body %}
