@@ -33,6 +33,15 @@ class SecurityController extends AbstractController
     }
 
     /**
+ * @Route("/logout", name="app_logout")
+ */
+    public function logout()
+    {
+    // Cette méthode ne sera jamais exécutée,
+    // car la déconnexion est gérée par le pare-feu de sécurité.
+    }
+
+    /**
  * @Route("/register", name="app_register")
  */
     public function register(Request $request, UserPasswordHasherInterface $passwordEncoder, EntityManagerInterface $entityManager): Response
@@ -64,5 +73,6 @@ class SecurityController extends AbstractController
         return $this->render('security/register.html.twig', [
             'form' => $form
         ]);
+    
 }
 }
