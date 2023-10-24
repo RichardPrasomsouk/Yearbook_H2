@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImageSide{% endblock %}
+
+{% block body %}
+    <h1>ImageSide</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ image_side.id }}</td>
+            </tr>
+            <tr>
+                <th>Pictures</th>
+                <td>{{ image_side.pictures }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_image_side_index') }}">back to list</a>
+
+    <a href="{{ path('app_image_side_edit', {'id': image_side.id}) }}">edit</a>
+
+    {{ include('image_side/_delete_form.html.twig') }}
+{% endblock %}
