@@ -1,3 +1,69 @@
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+@font-face {
+  font-family: "BwGradualDEMO";
+  src: url("/YEARBOOK_H2/public/fonts/Branding_with_Type_DEMO.txt")
+    format("opentype");
+}
+@font-face {
+  font-family: "BwGradualDEMO";
+  src: url("/YEARBOOK_H2/public/fonts/BwGradualDEMO-Bold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BwGradualDEMO";
+  src: url("/YEARBOOK_H2/public/fonts/BwGradualDEMO-Medium.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BwGradualDEMO";
+  src: url("/YEARBOOK_H2/public/fonts/BwGradualDEMO-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BwGradualDEMO";
+  src: url("/YEARBOOK_H2/public/fonts/BwGradualDEMO-light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Soleil";
+  src: url("public/fonts/SoleilBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Soleil";
+  src: url("public/fonts/SoleilBook.otf") format("opentype");
+}
+@font-face {
+  font-family: "Soleil";
+  src: url("public/fonts/SoleilRegular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Soleil";
+  src: url("public/fonts/SoleilLight.otf") format("opentype");
+}
+
+:root {
+  /* COLOR VARIABLES */
+  --purple: 211, 5, 166;
+  --blue: 0, 127, 219;
+  --green: 0, 140, 60;
+  --red: 255, 36, 36;
+  --yellow: 255, 22, 0;
+  --black: 0, 0, , 0;
+  --white: 255, 255, 255;
+
+  --opacity-1: 0.8;
+  --opacity-2: 0.6;
+  --opacity-3: 0.1;
+}
+/*exemple*/
+body {
+  background-color: rgba(var(--color), var(--opacity-1));
+}
+
 h1 {
   font-family: "soleil", sans-serif;
   font-size: 48px;
@@ -5,18 +71,24 @@ h1 {
   color: #000000;
 }
 
-h4 {
+/*h4{
+  font-family: "Bw grudual", sans-serif; 
+}*/
+h2 {
   font-family: "soleil", sans-serif;
-  font-size: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000000;
+}
+h3 {
+  font-family: "soleil", sans-serif;
+  font-size: 24px;
   font-weight: normal;
   color: #000000;
 }
-h4.footer__beginning {
-  font-family: "Bw grudual"
-}
-h3{
+h4 {
   font-family: "soleil", sans-serif;
-  font-size:24px;
+  font-size: 20px;
   font-weight: normal;
   color: #000000;
 }
@@ -34,9 +106,15 @@ h6 {
   opacity: 60%;
 }
 
-h2 {
-  font-family: "bw-gradual", sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  color: #000000;
-}
+/*{% block stylesheets %}
+    <style>
+        @font-face {
+          font-family: 'CustomFont';
+          src: url('{{ asset('path/to/font.woff') }}') format('woff');
+      }
+      
+      body {
+          font-family: 'CustomFont', sans-serif;
+      }
+  </style>
+{% endblock %}*/

@@ -1,70 +1,86 @@
-.article__large__card__container {
+.grid-article-large-card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-large-card-container--row {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+.article-large-card__title-container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 
-.article__large__card {
+}
+.article-large-card {
   width: 632px;
-  height: 634px;
-  background-color:#008C45;
+  height: 100% auto;
+  background-color: rgba(var(--green), var(--opacity-3)); 
   border-radius: 10px;
   margin: 20px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
-.article__large__card__img{
+.article-large-card__img {
   display: flex;
-  justify-content: center;
   border-radius: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
-.article__large__card__category__timer--container{
+.article-large-card__timer-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.article__large__card__category{
+.article-large-card__timer-img {
+  padding-right: 5px;
+}
+.article-large-card__category {
   width: auto;
   height: auto;
-  background-color:#008C45;
+  background-color: #008c45;
   border-radius: 20px;
-  margin: 20px;
-  padding:10px;
+  margin-top: 20px;
+  padding: 10px;
 }
-h7{
-  font-family: "soleil";
+span.article-large-card__category {
+  font-family: "soleil", sans-serif;
   font-size: 12px;
-  color:white;
-
+  color: white;
 }
-.article__large__card--timer{
+span.article-large-card__minutes{
+  font-family: "soleil", sans-serif;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+.article-large-card__timer {
   width: auto;
   height: auto;
   border-radius: 20px;
-  margin: 20px;
-  padding:10px;
+  margin-top: 20px;
+  
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border:solid 1px black;
+  border: solid 1px black;
 }
 
-h7.article__large__card--timer{
-  color: black;
-}
-.article__large__card__text{
-  margin-left: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-}
-H5.article__large__card__text{ 
-  opacity: 60%;
-}
-.article__large__card__text--container{
-  display:flex;
+
+.article-large-card__text-container {
+  display: flex;
   flex-direction: column;
+}
+H3.article-large-card__title {
+  font-family: "BwGradualDEMO", sans-serif;
+  font-size: 24px;
+  font-weight:normal;
+  color: #000000;
+}
+  
+H5.article-large-card__text {
+  opacity: 60%;
 }
