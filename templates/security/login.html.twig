@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Connexion</h2>
+
+    <form method="post">
+        {{ form_widget(form) }}
+        <button type="submit">Se connecter</button>
+    </form>
+
+    {% if app.user %}
+        <p>Welcome, {{ app.user.username }}!</p>
+    {% else %}
+        <p>You are not logged in.</p>
+    {% endif %}
+    <a href="{{ path('app_logout') }}">Déconnexion</a>
+{% endblock %}

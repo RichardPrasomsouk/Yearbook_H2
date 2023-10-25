@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImageEdge{% endblock %}
+
+{% block body %}
+    <h1>ImageEdge</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ image_edge.id }}</td>
+            </tr>
+            <tr>
+                <th>Picture</th>
+                <td>{{ image_edge.picture }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_image_edge_index') }}">back to list</a>
+
+    <a href="{{ path('app_image_edge_edit', {'id': image_edge.id}) }}">edit</a>
+
+    {{ include('image_edge/_delete_form.html.twig') }}
+{% endblock %}
