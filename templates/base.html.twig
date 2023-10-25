@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{ asset('css/header.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/article_grid.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/article_cover.css') }}" />
         <script src = "{{ asset('js/header.js') }}" defer></script>
         {% block stylesheets %}
         {% endblock %}
@@ -20,6 +21,7 @@
 
         {% include '_partials/header.html.twig' %}
         {% include 'pages/landing_page/article_grid.html.twig' %}
+        {% include 'pages/landing_page/article_cover.html.twig' %}
         {% block body endblock %}
         {% include '_partials/footer.html.twig' %}
     </body>

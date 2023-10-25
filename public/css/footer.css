@@ -1,29 +1,29 @@
-.footer__container--white {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
 }
-.footer__category--row {
+.footer__article-categories-links{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.footer__title {
+.footer__article-category-link {
   margin-left: 20px;
   margin-right: 20px;
 }
-.footer__social-media {
+.footer__social-media-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.footer__social-media-icon {
+.footer__social-media-link-icon {
   margin: 20px;
 }
-.logo-yearbook-footer{
+.footer__yearbook-logo{
   width:136;
   height: 40px;
 }
@@ -45,7 +45,7 @@
   }
 }
 @media screen and (max-width: 840px) {
-  .footer__category--row {
+  .footer__article-categories-links {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,10 +58,6 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .footer__category--row {
-    display: flex;
-    flex-direction: column;
-  }
   .side__by__side__image {
     width: 432.5px;
     height: 266.25px;
