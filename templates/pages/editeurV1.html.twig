@@ -1,7 +1,10 @@
+    {% extends 'base.html.twig' %}
+
+    {% block body %}
     <div id="menu">
         <ul>
             <li><a href="#">Accueil</a></li>
-            <li><a href="#">Services</a></li>
+            <li><span id="menu__citation">Citation</span></li>
             <li><a href="#">À propos</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -12,4 +15,19 @@
         <h1>Contenu de la page</h1>
         <p>Ceci est le contenu principal de la page. Vous pouvez y ajouter du texte, des images, des liens, etc.</p>
     </div>
+
+    {{ include('articles/_form.html.twig') }}
+
+    <div id="blocks"></div>
+
+
+    {% endblock %}
+
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/editeurV1.css') }}" />
+    {% endblock %}
+
+    {% block javascripts %}
+    <script src = "{{ asset('js/fetch.js') }}" defer></script>
+    {% endblock %}
 

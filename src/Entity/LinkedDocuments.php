@@ -16,6 +16,9 @@ class LinkedDocuments
     #[ORM\ManyToOne(inversedBy: 'linkedDocuments')]
     private ?Articles $link = null;
 
+    #[ORM\Column]
+    private ?int $blockOrder = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +32,18 @@ class LinkedDocuments
     public function setLink(?Articles $link): static
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    public function getBlockOrder(): ?int
+    {
+        return $this->blockOrder;
+    }
+
+    public function setBlockOrder(int $blockOrder): static
+    {
+        $this->blockOrder = $blockOrder;
 
         return $this;
     }
