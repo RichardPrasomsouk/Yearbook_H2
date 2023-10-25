@@ -3,26 +3,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
 }
-.category--row {
+.footer__category--row {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.category__title {
+.footer__title {
   margin-left: 20px;
   margin-right: 20px;
 }
-.social__media__footer {
+.footer__social-media {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.social__media--icon {
+.footer__social-media-icon {
   margin: 20px;
 }
-.logo__yearbook__footer{
+.logo-yearbook-footer{
   width:136;
   height: 40px;
 }
@@ -44,7 +45,7 @@
   }
 }
 @media screen and (max-width: 840px) {
-  .category--row {
+  .footer__category--row {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +58,7 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .category--row {
+  .footer__category--row {
     display: flex;
     flex-direction: column;
   }
