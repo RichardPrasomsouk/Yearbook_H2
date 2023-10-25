@@ -1,10 +1,19 @@
-const h1 = document.querySelector("h1");
-h1.addEventListener("click", async () => {
-  alert("ca marche");
-  const response = await fetch("/Yearbook_H2/public/index.php/quote/new");
-  const content = await response.text();
-  alert(content);
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Fetch chargé");
+  const form_citation = document.querySelector("#menu__citation");
+  const blocks_editor = document.querySelector("#blocks");
+  form_citation.addEventListener("click", async () => {
+    console.log(form_citation);
+    response = await fetch("/Yearbook_H2/public/index.php/quote/new");
+    const content = await response.text();
+    alert(content);
+    const tempElement = document.createElement("div");
+    tempElement.innerHTML = content;
+    blocks_editor.appendChild(tempElement);
+  });
 });
+
+//});
 // //implémenter le fetch créer une alerte en disant
 // const h1 = document.querySelector("h1");
 

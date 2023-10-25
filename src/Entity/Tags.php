@@ -21,6 +21,9 @@ class Tags
     #[ORM\ManyToMany(targetEntity: Articles::class, mappedBy: 'tags')]
     private Collection $articles;
 
+    #[ORM\Column]
+    private ?int $blockOrder = null;
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
@@ -72,5 +75,17 @@ class Tags
 
     public function __toString() {
         return $this->name;
+    }
+
+    public function getBlockOrder(): ?int
+    {
+        return $this->blockOrder;
+    }
+
+    public function setBlockOrder(int $blockOrder): static
+    {
+        $this->blockOrder = $blockOrder;
+
+        return $this;
     }
 }

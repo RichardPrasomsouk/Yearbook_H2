@@ -36,7 +36,7 @@ class ArticlesController extends AbstractController
             return $this->redirectToRoute('app_articles_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('articles/new.html.twig', [
+        return $this->render('pages/editeurV1.html.twig', [
             'article' => $article,
             'form' => $form,
         ]);
