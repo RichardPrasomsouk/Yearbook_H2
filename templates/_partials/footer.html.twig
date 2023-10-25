@@ -1,37 +1,39 @@
-  <footer>
-    <div class="footer__container--white">
-        <div class = "footer__category--row">
-        <h4 class = "footer__title">EDITOS</h4>
-        <h4 class = "footer__title">VIDEOS</h4>
-        <h4 class = "footer__title">INTERVIEWS</h4>
-        <h4 class = "footer__title">TEMOIGNAGES</h4>
-        <h4 class = "footer__title">JOURNAL DE BORD</h4>
+<footer class="footer">
+  {# <div class="footer__container"> #}
+      <div class = "footer__article-categories-links">
+        <h4 class = "footer__article-category-link">EDITOS</h4>
+        <h4 class = "footer__article-category-link">VIDEOS</h4>
+        <h4 class = "footer__article-category-link">INTERVIEWS</h4>
+        <h4 class = "footer__article-category-link">TEMOIGNAGES</h4>
+        <h4 class = "footer__article-category-link">JOURNAL DE BORD</h4>
+      </div>
 
-        </div>
-            <div class = "footer__social-media">
-                  <img
-                <img src="{{ asset('images/LinkedIn - Negative.svg') }}"
-                class = "footer__social-media-icon"
-                alt="logo__In" />  
-                <img
-                <img src="{{ asset('images/Instagram - Negative.svg') }}"
-                class = "footer__social-media-icon"
-                alt="logo__Insta" />     
-                  <img
-                <img src="{{ asset('images/Facebook - Negative.svg') }}"
-                class = "footer__social-media-icon"
-                alt="logo__FB" />
-                
-                
-                <img src="{{ asset('images/🦆 icon _big x_.svg') }}"
-                class = "footer__social-media-icon"
-                alt="logo__twitter" /> 
-          </div>
-      <img
-        <img src="{{ asset('images/logo_yearbook.svg') }}"
-        class="logo-yearbook-footer"
-        alt="logo_yearbook"
-      />
+      <div class = "footer__social-media-links">
+        <img 
+          src="{{ asset('images/LinkedIn - Negative.svg') }}"
+          class = "footer__social-media-link-icon"
+          alt="logo__In" 
+        />  
+
+        <img src="{{ asset('images/Instagram - Negative.svg') }}"
+        class = "footer__social-media-link-icon"
+        alt="logo__Insta" />     
+          {# <img #}
+        <img src="{{ asset('images/Facebook - Negative.svg') }}"
+        class = "footer__social-media-link-icon"
+        alt="logo__FB" />
+          
+          
+      <img src="{{ asset('images/🦆 icon _big x_.svg') }}"
+      class = "footer__social-media-link-icon"
+      alt="logo__twitter" /> 
     </div>
-    </div>
-  </footer>
+    
+    <img
+      <img src="{{ asset('images/logo_yearbook.svg') }}"
+      class="footer__yearbook-logo"
+      alt="logo_yearbook"
+    />
+  </div>
+  {# </div> #}
+</footer>
