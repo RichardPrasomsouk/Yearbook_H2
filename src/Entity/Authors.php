@@ -157,4 +157,7 @@ class Authors
 
         return $this;
     }
+    public function __toString() {
+        return $this->author_first_name . " " . $this->author_last_name;
+    }
 }
