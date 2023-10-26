@@ -1,0 +1,35 @@
+.bloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.bloc-image img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;co
+}
+.bloc-citation {
+  position: relative;
+  width: 40%;
+  margin-right: 20px;
+}
+.image-citation {
+  position: absolute;
+  height: 50px;
+  top: -15px;
+  left: -55px;
+}
+.nom-auteur {
+  color: #d305a6;
+  opacity: 0.6;
+  text-align: left;
+}
+@media screen and (max-width: 1160px) {
+  .bloc {
+    display: block;
+    justify-content: center;
+  }
+}
