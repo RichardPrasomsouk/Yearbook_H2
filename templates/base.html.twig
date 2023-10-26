@@ -9,18 +9,26 @@
         <link rel="stylesheet" href="{{ asset('css/header.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/article_grid.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/video.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/citation.css') }}" />
+
         <script src = "{{ asset('js/header.js') }}" defer></script>
+        <script src = "{{ asset('js/video.js') }}" defer></script>
         {% block stylesheets %}
         {% endblock %}
 
-        {% block javascripts %}
+        {% block js %}
         {% endblock %}
     </head>
     <body>
 
         {% include '_partials/header.html.twig' %}
         {% include 'pages/landing_page/article_grid.html.twig' %}
-        {% block body endblock %}
+        {% block body %}{% endblock %}
         {% include '_partials/footer.html.twig' %}
+        {% include 'authors/video.html.twig' %}
+        {% include 'authors/citation.html.twig' %}
+        
+
     </body>
 </html>

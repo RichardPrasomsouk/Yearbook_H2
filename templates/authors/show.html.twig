@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{#  #}
+{% block js %}
+<script src={{ asset('js/test.js') }} ></script>
+{% endblock %}
+
 {% block title %}Authors{% endblock %}
 
 {% block body %}
