@@ -1,15 +1,54 @@
-    <div id="menu">
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
+{% extends 'base.html.twig' %}
 
-    <!-- Contenu de la page -->
-    <div id="content">
-        <h1>Contenu de la page</h1>
-        <p>Ceci est le contenu principal de la page. Vous pouvez y ajouter du texte, des images, des liens, etc.</p>
-    </div>
 
+{% block title %}Category index{% endblock %}
+
+{% block body %}
+       <nav class="nav">
+            <!--div class="nav__button">
+                <span class="button__left">
+                    <button>textes</button>
+                    <button>citations</button>
+                    <button>carrousel</button>
+                    <button>image pleine page</button>
+                    <button>image side by side</button>
+                </span>
+                <span class="button__right">
+                    <button class="right__pubier">publier</button>
+                </span>
+            </div-->
+        <div id="nav__button">
+            <ul class="button__left">
+                <li><button id="menu__citation">Citation</button></li>
+                <li><button id="menu__paragraph">Paragraphe</button></li>
+                <li><button id="menu__imageside">Image Side</button></li>
+                <li><button id="menu__imageedge">Image Edge</button></li>
+                <li><button id="menu__externallinks">Liens externes</button></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        </nav>
+        <main>
+            <!-- Contenu de la page -->
+            <div id="content">
+                <h1>Contenu de la page</h1>
+                <p>Ceci est le contenu principal de la page. Vous pouvez y ajouter du texte, des images, des liens, etc.</p>
+            </div>
+
+            {{ include('articles/_form.html.twig') }}
+
+            <div id="blocks"></div>
+        </main>
+    </body>
+
+{% endblock %}
+
+    {% block stylesheets %}
+    <!--link rel="stylesheet" href="{#{ asset('css/editeurV1.css') }#}" /-->
+    {% endblock %}
+
+    {% block javascripts %}
+    <script src = "{{ asset('js/fetch.js') }}" defer></script>
+    {% endblock %}

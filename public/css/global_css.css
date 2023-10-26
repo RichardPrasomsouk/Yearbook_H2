@@ -1,6 +1,5 @@
 body {
   margin: 0 auto;
-  padding: 0 auto;
 }
 
 @font-face {
@@ -51,7 +50,7 @@ body {
   --blue: 0, 127, 219;
   --green: 0, 140, 60;
   --red: 255, 36, 36;
-  --yellow: 255, 22, 0;
+  --yellow: 255, 122, 0;
   --black: 0, 0, , 0;
   --white: 255, 255, 255;
 

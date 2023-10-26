@@ -1,8 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="side-by-side-container">
+    {#<div class="side-by-side-container">
       <div class="side-by-side__image"></div>
       <div class="side-by-side__image"></div>
-    </div>
+    </div>#}
+        {% include 'pages/landing_page/article_grid.html.twig' %}
+        {% include 'pages/landing_page/article_grid_3_by_3_cards.html.twig' %}
+        {% include 'pages/landing_page/article_cover.html.twig' %}
+        {% include 'pages/landing_page/identification_admin.html.twig' %}
+
 {% endblock %}

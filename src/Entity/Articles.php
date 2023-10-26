@@ -59,11 +59,31 @@ class Articles
     #[ORM\ManyToMany(targetEntity: Authors::class, mappedBy: 'written_articles')]
     private Collection $authors;
 
+    #[ORM\OneToMany(mappedBy: 'article', targetEntity: Quote::class)]
+    private Collection $quotes;
+
+    #[ORM\OneToMany(mappedBy: 'article', targetEntity: Paragraph::class)]
+    private Collection $paragraphs;
+
+    #[ORM\OneToMany(mappedBy: 'article', targetEntity: ImageSide::class)]
+    private Collection $imageSides;
+
+    #[ORM\OneToMany(mappedBy: 'article', targetEntity: ImageEdge::class)]
+    private Collection $imageEdges;
+
+    #[ORM\OneToMany(mappedBy: 'article', targetEntity: ExternalLinks::class)]
+    private Collection $externalLinks;
+
     public function __construct()
     {
         $this->tags = new ArrayCollection();
         $this->linkedDocuments = new ArrayCollection();
         $this->authors = new ArrayCollection();
+        $this->quotes = new ArrayCollection();
+        $this->paragraphs = new ArrayCollection();
+        $this->imageSides = new ArrayCollection();
+        $this->imageEdges = new ArrayCollection();
+        $this->externalLinks = new ArrayCollection();
     }
 
 
@@ -272,6 +292,156 @@ class Articles
     {
         if ($this->authors->removeElement($author)) {
             $author->removeWrittenArticle($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Quote>
+     */
+    public function getQuotes(): Collection
+    {
+        return $this->quotes;
+    }
+
+    public function addQuote(Quote $quote): static
+    {
+        if (!$this->quotes->contains($quote)) {
+            $this->quotes->add($quote);
+            $quote->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeQuote(Quote $quote): static
+    {
+        if ($this->quotes->removeElement($quote)) {
+            // set the owning side to null (unless already changed)
+            if ($quote->getArticle() === $this) {
+                $quote->setArticle(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Paragraph>
+     */
+    public function getParagraphs(): Collection
+    {
+        return $this->paragraphs;
+    }
+
+    public function addParagraph(Paragraph $paragraph): static
+    {
+        if (!$this->paragraphs->contains($paragraph)) {
+            $this->paragraphs->add($paragraph);
+            $paragraph->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeParagraph(Paragraph $paragraph): static
+    {
+        if ($this->paragraphs->removeElement($paragraph)) {
+            // set the owning side to null (unless already changed)
+            if ($paragraph->getArticle() === $this) {
+                $paragraph->setArticle(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, ImageSide>
+     */
+    public function getImageSides(): Collection
+    {
+        return $this->imageSides;
+    }
+
+    public function addImageSide(ImageSide $imageSide): static
+    {
+        if (!$this->imageSides->contains($imageSide)) {
+            $this->imageSides->add($imageSide);
+            $imageSide->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImageSide(ImageSide $imageSide): static
+    {
+        if ($this->imageSides->removeElement($imageSide)) {
+            // set the owning side to null (unless already changed)
+            if ($imageSide->getArticle() === $this) {
+                $imageSide->setArticle(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, ImageEdge>
+     */
+    public function getImageEdges(): Collection
+    {
+        return $this->imageEdges;
+    }
+
+    public function addImageEdge(ImageEdge $imageEdge): static
+    {
+        if (!$this->imageEdges->contains($imageEdge)) {
+            $this->imageEdges->add($imageEdge);
+            $imageEdge->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImageEdge(ImageEdge $imageEdge): static
+    {
+        if ($this->imageEdges->removeElement($imageEdge)) {
+            // set the owning side to null (unless already changed)
+            if ($imageEdge->getArticle() === $this) {
+                $imageEdge->setArticle(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, ExternalLinks>
+     */
+    public function getExternalLinks(): Collection
+    {
+        return $this->externalLinks;
+    }
+
+    public function addExternalLink(ExternalLinks $externalLink): static
+    {
+        if (!$this->externalLinks->contains($externalLink)) {
+            $this->externalLinks->add($externalLink);
+            $externalLink->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeExternalLink(ExternalLinks $externalLink): static
+    {
+        if ($this->externalLinks->removeElement($externalLink)) {
+            // set the owning side to null (unless already changed)
+            if ($externalLink->getArticle() === $this) {
+                $externalLink->setArticle(null);
+            }
         }
 
         return $this;

@@ -17,6 +17,12 @@ class Paragraph
     #[ORM\Column(type: Types::TEXT)]
     private ?string $text = null;
 
+    #[ORM\Column]
+    private ?int $blockOrder = null;
+
+    #[ORM\ManyToOne(inversedBy: 'paragraphs')]
+    private ?Articles $article = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -30,6 +36,30 @@ class Paragraph
     public function setText(string $text): static
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    public function getBlockOrder(): ?int
+    {
+        return $this->blockOrder;
+    }
+
+    public function setBlockOrder(int $blockOrder): static
+    {
+        $this->blockOrder = $blockOrder;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Articles
+    {
+        return $this->article;
+    }
+
+    public function setArticle(?Articles $article): static
+    {
+        $this->article = $article;
 
         return $this;
     }

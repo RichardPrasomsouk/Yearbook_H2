@@ -1,0 +1,205 @@
+/* FONTS BW */
+
+* {
+  box-sizing: border-box;
+}
+
+.article-cover {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/interview.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover ; 
+}
+
+.article-cover__bottom-right-card {
+  width: 48.60%;
+  height: 41%;
+  background-color: #FF2424;
+  opacity: 0.80; 
+  border-radius: 20px 0px 0px 0px;
+}
+
+.bottom-right-card__infos-of-article-top-card {
+  width: 84.60%;
+  height: 12.33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 27.2px 11.1px 20px;
+}
+
+.top-card__first-two-buttons {
+  width: 220px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 22px;
+}
+
+.tag__icon {
+  display: inline-block;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  text-align: center;
+  width: 110px;
+}
+
+.tag {
+  color: white;
+  font-family: 'BwGradualDEMO';
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.reading-estimation__button img {
+  width: 15px;
+  height: 15px;
+}
+
+.reading-estimation__time-button {
+  display: flex ;
+  width: 84px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 50px;
+  height: 39px;
+}
+
+.reading-estimation__time {
+  display: inline-block;
+  text-align: center;
+  width: 39px;
+}
+
+.reading-estimation {
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+  font-family: 'BwGradualDEMO';
+  margin-left: 5px;
+  width: 100%;
+}
+
+.more {
+  color: white;
+  font-size: 6px;
+  text-decoration: underline;
+  font-family: 'BwGradualDEMO';
+  font-size: 15px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.article__title {
+  font-family: 'BwGradualDEMO';
+  font-size: 34px;
+  line-height: 44.2px;
+  margin: 0;
+  color: white;
+  padding-left: 40px;
+  padding-top: 20px;
+  width: 600px;
+}
+
+.article__authors {
+  font-family: 'Soleil';
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  color: white;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+@media screen and (min-width : 360px) and (max-width: 430px) {
+  .article-cover__bottom-right-card {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    margin-top: 180px;
+  }
+
+  .article-cover {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+  }
+
+  .tag {
+    font-size: 10px;
+  }
+
+  .reading-estimation__button img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .reading-estimation {
+    font-size: 10px;
+  }
+
+  .more {
+    font-size: 10px;
+  }
+
+  .article__title {
+    font-family: 'BwGradualDEMO-regular';
+    font-size: 20px;
+    line-height: 52px;
+    margin: 0;
+    color: white;
+    width: 347px;
+    line-height: 26px;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .article__authors {
+    font-family: 'Soleil';
+    font-size: 10px;
+    line-height: 20px;
+    margin: 0;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .bottom-right-card__infos-of-article-top-card {
+    margin: 10px 20px 10px 20px;
+    padding-top: 10px;
+  }
+
+  .reading-estimation__time-button {
+    width: 71px;
+    height: 30px;
+  }
+
+  .tag__icon {
+    width: 77px;
+    height: 30px;
+    padding: 6px 8px 8px 8px;
+  }
+
+  .top-card__first-two-buttons {
+    width: 158px;
+    margin-left: 0px;
+  }
+
+  .header {
+    height: 60px;
+  }
+}

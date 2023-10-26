@@ -22,6 +22,14 @@ class ArticlesController extends AbstractController
         ]);
     }
 
+    #[Route('/{id}/category', name: 'app_articles_category', methods: ['GET'])]
+    public function listByCategory(ArticlesRepository $articlesRepository): Response
+    {
+        return $this->render('articles/index.html.twig', [
+            'articles' => $articlesRepository->findAll(),
+        ]);
+    }
+
     #[Route('/new', name: 'app_articles_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
@@ -36,7 +44,7 @@ class ArticlesController extends AbstractController
             return $this->redirectToRoute('app_articles_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('articles/new.html.twig', [
+        return $this->render('pages/editeurV1.html.twig', [
             'article' => $article,
             'form' => $form,
         ]);

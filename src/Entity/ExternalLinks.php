@@ -16,6 +16,12 @@ class ExternalLinks
     #[ORM\Column(length: 255)]
     private ?string $url = null;
 
+    #[ORM\Column]
+    private ?int $blockOrder = null;
+
+    #[ORM\ManyToOne(inversedBy: 'externalLinks')]
+    private ?Articles $article = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +35,30 @@ class ExternalLinks
     public function setUrl(string $url): static
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    public function getBlockOrder(): ?int
+    {
+        return $this->blockOrder;
+    }
+
+    public function setBlockOrder(int $blockOrder): static
+    {
+        $this->blockOrder = $blockOrder;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Articles
+    {
+        return $this->article;
+    }
+
+    public function setArticle(?Articles $article): static
+    {
+        $this->article = $article;
 
         return $this;
     }
