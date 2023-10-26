@@ -16,11 +16,11 @@ class YearbookController extends AbstractController
         ]);
     }
 
-    #[Route('/articlesgrid', name: 'articles_grid')]
-    public function index(): Response
-    {
-        return $this->render('pages/landing_page/articles_grid.html.twig', [
-            'controller_name' => 'YearbookController',
-        ]);
-    }
+    // #[Route('/articlesgrid', name: 'articles_grid')]
+    // public function index(): Response
+    // {
+    //     return $this->render('pages/landing_page/articles_grid.html.twig', [
+    //         'controller_name' => 'YearbookController',
+    //     ]);
+    // }
 }
