@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/identification_admin.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/article_grid_3_by_3_cards.css') }}" />
+        <script src="{{ asset('js/carousel.js') }}" defer></script>
         <script src = "{{ asset('js/header.js') }}" defer></script>
         {% block stylesheets %}
         {% endblock %}
@@ -24,12 +25,13 @@
     <body>
 
         {% include '_partials/header.html.twig' %}
+        {#
         {% include 'pages/landing_page/article_grid.html.twig' %}
         {% include 'pages/landing_page/article_grid_3_by_3_cards.html.twig' %}
         {% include 'pages/landing_page/article_cover.html.twig' %}
         {% include 'pages/landing_page/identification_admin.html.twig' %}
-        {% block body endblock %}
+        #}
+        {% block body %}{% endblock %}
         {% include '_partials/footer.html.twig' %}
-        <script src="{{ asset('js/carousel.js') }}"></script>
     </body>
 </html>
