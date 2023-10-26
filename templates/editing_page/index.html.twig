@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Category index{% endblock %}
+
+{% block body %}
+    <body>
+        <header>
+            <img src="{{ asset('footer/logo.svg') }}" alt="">
+            <a href="#">deconnexion</a>
+        </header>
+
+        <nav class="nav">
+
+            <div class="nav__button">
+                <span class="button__left">
+                    <button>textes</button>
+                    <button>citations</button>
+                    <button>carrousel</button>
+                    <button>image pleine page</button>
+                    <button>image side by side</button>
+                </span>
+                <span class="button__right">
+                    <button class="right__pubier">publier</button>
+                </span>
+            </div>
+        </nav>
+        <main>
+            <form>
+
+                    <select class="form__categories-select" name="categories" id="categories-select">
+                        <option value="">categorie</option>
+                        <option value="edito">edito</option>
+                        <option value="video">video</option>
+                        <option value="interview">interview</option>
+                        <option value="temoignage">temoignage</option>
+                        <option value="journal de bord">journal de bord</option>
+                        <option value="autre">autre</option>
+                    </select>
+
+
+                <input class="form__titre" type="text" id="titre"  placeholder="titre"/>
+                <input class="form__auteur" type="text" id="auteur(s)"  placeholder="author(s)"/>
+                <input class="form__chapeau" type="text" id="chapeau" name="chapeau" placeholder="chapeau"/>
+                <input class="form__date" type="date" id="date"  >
+            </form>
+
+
+            <footer>
+                <img src="{{ asset('footer/voiture.jpg') }}" alt="">
+            </footer>
+        </main>
+    </body>
+
+    <section>
+        <div class="carousel">
+            <ul class="carousel__list">
+
+                <li class="carousel__list--images-first-image" id="carousel__list--image">
+                    <img src="{{ asset('./footer/voiture.jpg') }}" alt="">
+                </li>
+                <li>
+                    <img src="{{ asset('./footer/voiture3.jpg') }}" alt="">
+                </li>
+                <li>
+                    <img src="{{ asset('./footer/voiture 4.jpg') }}"alt="">
+                </li>
+                <li>
+                    <img src="{{ asset('./footer/voiture6.jpg') }}"alt="">
+                </li >
+                <li >
+                    <img src="{{ asset('./footer/voiture1.jpg') }}"alt="">
+                </li>
+                <li>
+                    <img src="{{ asset('./footer/voiture5.jpg') }}"alt="">
+                </li>
+                <button class="carousel__list--btn-left" id="carousel__list--js-btn-left"></button>
+                <button class="carousel__list--btn-right" id="carousel__list--js-btn-right"></button>
+            </ul>
+        </div>
+
+    </section>
+
+
+
+
+{% endblock %}
