@@ -20,7 +20,7 @@ class Quote
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $author = null;
 
-    #[ORM\Column]
+    #[ORM\Column (nullable: true)]
     private ?int $blockOrder = null;
 
     #[ORM\ManyToOne(inversedBy: 'quotes')]

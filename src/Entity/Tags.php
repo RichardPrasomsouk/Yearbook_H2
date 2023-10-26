@@ -21,7 +21,7 @@ class Tags
     #[ORM\ManyToMany(targetEntity: Articles::class, mappedBy: 'tags')]
     private Collection $articles;
 
-    #[ORM\Column]
+    #[ORM\Column (nullable: true)]
     private ?int $blockOrder = null;
 
     public function __construct()

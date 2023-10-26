@@ -1,10 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Fetch chargé");
   const form_citation = document.querySelector("#menu__citation");
+  const form_paragraph = document.querySelector("#menu__paragraph");
+  const form_imageside = document.querySelector("#menu__imageside");
+  const form_imageedge = document.querySelector("#menu__imageedge");
+  const form_externallinks = document.querySelector("#menu__externallinks");
   const blocks_editor = document.querySelector("#blocks");
   form_citation.addEventListener("click", async () => {
     console.log(form_citation);
     response = await fetch("/Yearbook_H2/public/index.php/quote/new");
+    const content = await response.text();
+    alert(content);
+    const tempElement = document.createElement("div");
+    tempElement.innerHTML = content;
+    blocks_editor.appendChild(tempElement);
+  });
+  form_paragraph.addEventListener("click", async () => {
+    console.log(form_paragraph);
+    response = await fetch("/Yearbook_H2/public/index.php/paragraph/new"); 
+    const content = await response.text();
+    alert(content);
+    const tempElement = document.createElement("div");
+    tempElement.innerHTML = content;
+    blocks_editor.appendChild(tempElement);
+  });
+  form_imageside.addEventListener("click", async () => {
+    console.log(form_imageside);
+    response = await fetch("/Yearbook_H2/public/index.php/image/side/new"); 
+    const content = await response.text();
+    alert(content);
+    const tempElement = document.createElement("div");
+    tempElement.innerHTML = content;
+    blocks_editor.appendChild(tempElement);
+  });
+  form_imageedge.addEventListener("click", async () => {
+    console.log(form_imageedge);
+    response = await fetch("/Yearbook_H2/public/index.php/image/edge/new"); 
+    const content = await response.text();
+    alert(content);
+    const tempElement = document.createElement("div");
+    tempElement.innerHTML = content;
+    blocks_editor.appendChild(tempElement);
+  });
+  form_externallinks.addEventListener("click", async () => {
+    console.log(form_externallinks);
+    response = await fetch("/Yearbook_H2/public/index.php/external/links/new");
     const content = await response.text();
     alert(content);
     const tempElement = document.createElement("div");
