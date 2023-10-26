@@ -11,7 +11,7 @@ class YearbookController extends AbstractController
     #[Route('/', name: 'app_yearbook')]
     public function index(): Response
     {
-        return $this->render('pages/landing_page/side_by_side_img.html.twig', [
+        return $this->render('pages/landing_page/landing_page.html.twig', [
             'controller_name' => 'YearbookController',
         ]);
     }
