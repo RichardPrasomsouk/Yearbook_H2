@@ -1,29 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="citation.css" />
-  </head>
-  <body>
-    <!-- <div><img src="icon-citation.png" alt="" class="image-citation" /></div> -->
+<div class="bloc">
+  <div class="bloc-citation">
+    <img src="{{ asset('video/logo-citation.png') }}" alt="" class="image-citation" />
+    <p class="paragraphe-citation">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta
+      soluta neque nesciunt possimus asperiores, rem ex vitae vel iure
+      labore harum reiciendis consequuntur praesentium aut quam eius sint
+      error?
+    </p>
+    <p class="nom-auteur">Andriantafika Randrianarimanana</p>
+  </div>
 
-    <div class="bloc">
-      <div class="bloc-citation">
-        <img src="{{ asset('video/logo-citation.png') }}" alt="" class="image-citation" />
-        <p class="paragraphe-citation">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta
-          soluta neque nesciunt possimus asperiores, rem ex vitae vel iure
-          labore harum reiciendis consequuntur praesentium aut quam eius sint
-          error?
-        </p>
-        <p class="nom-auteur">Andriantafika Randrianarimanana</p>
-      </div>
-
-      <div class="bloc-image">
-        <img src="{{ asset('video/image.png') }}" alt="" />
-      </div>
-    </div>
-  </body>
-</html>
+  <div class="bloc-image">
+    <img src="{{ asset('video/image.png') }}" alt="" />
+  </div>
+</div>
