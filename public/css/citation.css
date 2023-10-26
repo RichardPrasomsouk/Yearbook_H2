@@ -1,34 +1,34 @@
-.bloc {
+.quote-component {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 120px;
 }
 
-.bloc-image img {
+.quote-component__image img {
   width: 500px;
   height: 500px;
   object-fit: cover;
   border-radius: 20px;
 }
-.bloc-citation {
+.quote-component__body {
   position: relative;
   width: 40%;
   margin-right: 20px;
 }
-.image-citation {
+.quote-component__quotation-icon {
   position: absolute;
   height: 50px;
   top: -15px;
   left: -55px;
 }
-.nom-auteur {
+.quote-component__author {
   color: #d305a6;
   opacity: 0.6;
   text-align: left;
 }
 @media screen and (max-width: 1160px) {
-  .bloc {
+  .quote-component {
     display: flex;
     flex-direction: column;
   }
