@@ -9,7 +9,7 @@
   width: 500px;
   height: 500px;
   object-fit: cover;
-  border-radius: 20px;co
+  border-radius: 20px;
 }
 .bloc-citation {
   position: relative;
@@ -29,7 +29,7 @@
 }
 @media screen and (max-width: 1160px) {
   .bloc {
-    display: block;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 }
