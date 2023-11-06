@@ -1,23 +1,24 @@
 .header {
   height: 40px;
   width: 100%;
-  /*position: fixed;*/
+  position: fixed;
   /*si enlève fixed marche pas trop mal*/
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   background-color: white;
   align-items: center;
-  
+  z-index: 2;
 }
 .header__burger-menu {
   width: 30px;
-  height: 20px;
   cursor: pointer;
   z-index: 2;
+  margin-right: 68px;
 
 }
 
@@ -46,7 +47,6 @@
   top: -100%; /* Le menu est initialement en dehors de la vue */
   left: 0;
   width: 100%;
-  padding: 20px 0;
   transition: top 0.5s; /* Animation pour déplacer le menu */
 }
 
@@ -86,4 +86,7 @@ a {
   height: 4px;
   background-color: #fff;
   margin: 4px 0;
+}
+.logo-yearbook-header{
+  margin-left: 68px;
 }

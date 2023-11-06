@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Yearbook-Hetic!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         <link rel="stylesheet" href="{{ asset('css/global_css.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/side_by_side.css') }}" />
@@ -10,14 +10,15 @@
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/article_grid.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/article_cover.css') }}" />
-        <link rel="stylesheet" href="{{ asset('css/editeur.css') }}">
+        <!--<link rel="stylesheet" href="{{ asset('css/editeur.css') }}">-->
         <link rel="stylesheet" href="{{ asset('css/identification_admin.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/article_grid_3_by_3_cards.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/featured-articles.css') }}">
-        <script src="{{ asset('js/carousel.js') }}" defer></script>
         <link rel="stylesheet" href="{{ asset('css/video.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/citation.css') }}" />
 
+
+        <script src="{{ asset('js/carousel.js') }}" defer></script>
         <script src = "{{ asset('js/header.js') }}" defer></script>
         <script src = "{{ asset('js/video.js') }}" defer></script>
         {% block stylesheets %}
