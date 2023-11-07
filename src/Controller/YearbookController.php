@@ -14,6 +14,7 @@ class YearbookController extends AbstractController
         return $this->render('pages/landing_page/landing_page.html.twig', [
             'controller_name' => 'YearbookController',
         ]);
+        
     }
 
     // #[Route('/articlesgrid', name: 'articles_grid')]
