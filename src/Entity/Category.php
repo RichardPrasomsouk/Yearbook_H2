@@ -22,7 +22,7 @@ class Category
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\OneToMany(mappedBy: ' ', targetEntity: Articles::class)]
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Articles::class)]
     private Collection $articles;
 
     public function __construct()
