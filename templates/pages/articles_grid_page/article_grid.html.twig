@@ -1,9 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 <div class = "grid-article-large-card-container">
 <div class = "article-large-card__title-container">
 <h1 class="article-large-card__maintitle">Les Derniers articles</h1>
 <h3 class="article-large-card__sub-title">Voir plus →</h3>
 </div>
 <div class = "article-large-card-container--row">
+
+{% for article in articles %}
+
  <div class = "article-large-card">
     <img src="{{ asset('images/article_card_img.svg') }}"
     class="article-large-card__img"
@@ -19,12 +26,15 @@
     </div>
     <div class = "article-large-card__text-container">
     <div class = "article-large-card__text">
-    <h3 class="article-large-card__title">Les frères Da Silva à la conquête du monde<br>professionnel</h3>
+    <h3 class="article-large-card__title">{{ article.title }}</h3>
      <h4>Par Kélia SIAO</h4>
      <h5>1 décembre 2022</h5>
     </div>
     </div>
  </div>
+
+ {% endfor %}
+ 
 <div class = "article-large-card">
     <img src="{{ asset('images/article_card_img.svg') }}"
     class="article-large-card__img"
@@ -48,3 +58,5 @@
  </div>
  </div>
 </div>
+
+{% endblock %}
