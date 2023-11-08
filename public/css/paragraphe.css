@@ -2,20 +2,29 @@
   width: 620px;
   margin: 0 auto;
 }
-.block_paragraph__text1 {
+.block_paragraph__text2 {
+  color: #000;
+
+  font-family: Bw Gradual DEMO;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+}
+/* .block_paragraph__text1 {
   color: #0047ab;
 }
 .paragraphe-h3 {
   color: #000;
 
   /* H2 BW Gradual D */
-  font-family: Bw Gradual DEMO;
+/* font-family: Bw Gradual DEMO;
   font-size: 34px;
   font-style: normal;
   font-weight: 700;
-  line-height: 40px; /* 117.647% */
-}
-.block_paragraph__text5 {
+  line-height: 40px; 117.647% */
+
+/* .block_paragraph__text5 {
   color: #000;
 
   font-family: Bw Gradual DEMO;
@@ -23,14 +32,12 @@
   font-style: normal;
   font-weight: 700;
   line-height: 22px; /* 137.5% */
-}
 
-.block_paragraph__text6 {
+/* .block_paragraph__text6 {
   color: #000;
 
   font-family: Bw Gradual DEMO;
   font-size: 16px;
   font-style: italic;
   font-weight: 700;
-  line-height: 22px;
-}
+  line-height: 22px; */
