@@ -12,50 +12,32 @@
 {% for article in articles %}
 
  <div class = "article-large-card">
-    <img src="{{ asset('images/article_card_img.svg') }}"
+    <img src="{{ asset('images/'~ (article.pictures ? article.pictures : 'meeting.jpg' )) }}"
     class="article-large-card__img"
     alt="article-card-img"/>
     <div class = "article-large-card__timer-container">
-    <span class="article-large-card__category">TEMOIGNAGE METIER</span>
+    <span class="article-large-card__category">{{ article.category | upper }}</span>
     <div class = "article-large-card__timer">
         <img src="{{ asset('images/timer.svg') }}"
     class="article-large-card__timer-img"
     alt="article__card-img"/>
-    <span class="article-large-card__minutes">5 MIN</span>
+    <span class="article-large-card__minutes">{{ article.readingEstimationTime }} MIN</span>
     </div>
     </div>
     <div class = "article-large-card__text-container">
     <div class = "article-large-card__text">
     <h3 class="article-large-card__title">{{ article.title }}</h3>
-     <h4>Par Kélia SIAO</h4>
-     <h5>1 décembre 2022</h5>
+     <h4>Par 
+     {% for author in article.authors %}
+     {{ author.authorFirstName}} {{ author.authorLastName}}
+     {% endfor %}
+     </h4>
+     <h5>{{ article.createdAt ? article.createdAt|date('d/m/Y') : '' }}</h5>
     </div>
     </div>
  </div>
 
  {% endfor %}
- 
-<div class = "article-large-card">
-    <img src="{{ asset('images/article_card_img.svg') }}"
-    class="article-large-card__img"
-    alt="article-card-img"/>
-    <div class = "article-large-card__timer-container">
-    <span class="article-large-card__category">TEMOIGNAGE METIER</span>
-    <div class = "article-large-card__timer">
-        <img src="{{ asset('images/timer.svg') }}"
-    class="article-large-card__timer-img"
-    alt="article__card-img"/>
-    <span class="article-large-card__minutes">5 MIN</span>
-    </div>
-    </div>
-    <div class = "article-large-card__text-container">
-    <div class = "article-large-card__text">
-    <h3 class="article-large-card__title">Les frères Da Silva à la conquête du monde<br>professionnel</h3>
-     <h4>Par Kélia SIAO</h4>
-     <h5>1 décembre 2022</h5>
-    </div>
-    </div>
- </div>
  </div>
 </div>
 

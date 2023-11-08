@@ -17,10 +17,10 @@ class Authors
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $author_first_name = null;
+    private ?string $authorFirstName = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $author_last_name = null;
+    private ?string $authorLastName = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $biography = null;
@@ -52,24 +52,24 @@ class Authors
 
     public function getAuthorFirstName(): ?string
     {
-        return $this->author_first_name;
+        return $this->authorFirstName;
     }
 
     public function setAuthorFirstName(string $author_first_name): static
     {
-        $this->author_first_name = $author_first_name;
+        $this->authorFirstName = $author_first_name;
 
         return $this;
     }
 
     public function getAuthorLastName(): ?string
     {
-        return $this->author_last_name;
+        return $this->authorLastName;
     }
 
     public function setAuthorLastName(string $author_last_name): static
     {
-        $this->author_last_name = $author_last_name;
+        $this->authorLastName = $author_last_name;
 
         return $this;
     }

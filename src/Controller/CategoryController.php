@@ -50,6 +50,16 @@ class CategoryController extends AbstractController
         ]);
     }
 
+    #[Route('/{id}/articles', name: 'app_category_show_articles', methods: ['GET'])]
+    public function showArticles(int $id, CategoryRepository $rep): Response
+    {
+        $category = $rep->find($id);
+        return $this->render('pages/articles_grid_page/article_grid.html.twig', [
+            'articles' => $category->getArticles(),
+        ]);
+    }
+
+
     #[Route('/{id}/edit', name: 'app_category_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Category $category, EntityManagerInterface $entityManager): Response
     {
