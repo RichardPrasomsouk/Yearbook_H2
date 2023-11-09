@@ -37,7 +37,7 @@ class Authors
     #[ORM\Column(length: 255)]
     private ?string $author_status = null;
 
-    #[ORM\ManyToMany(targetEntity: Articles::class, inversedBy: 'authors')]
+    #[ORM\ManyToMany(targetEntity: Articles::class, mappedBy: 'authors')]
     private Collection $written_articles;
 
     public function __construct()
@@ -55,9 +55,9 @@ class Authors
         return $this->authorFirstName;
     }
 
-    public function setAuthorFirstName(string $author_first_name): static
+    public function setAuthorFirstName(string $authorFirstName): static
     {
-        $this->authorFirstName = $author_first_name;
+        $this->authorFirstName = $authorFirstName;
 
         return $this;
     }
@@ -67,9 +67,9 @@ class Authors
         return $this->authorLastName;
     }
 
-    public function setAuthorLastName(string $author_last_name): static
+    public function setAuthorLastName(string $authorLastName): static
     {
-        $this->authorLastName = $author_last_name;
+        $this->authorLastName = $authorLastName;
 
         return $this;
     }
@@ -158,6 +158,6 @@ class Authors
         return $this;
     }
     public function __toString() {
-        return $this->author_first_name . " " . $this->author_last_name;
+        return $this->authorFirstName . " " . $this->authorLastName;
     }
 }

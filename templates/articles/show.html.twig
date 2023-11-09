@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Articles</h1>
 
-    <table class="table">
+    {# <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -52,9 +52,16 @@
                 <td>{{ article.linkedDocuments }}</td>
             </tr>
         </tbody>
-    </table>
+    </table> #}
+
+    <section id="content">
+    {% for block in contentParts %}
+        {{ block | raw}}
+    {% endfor %}
+    </section>
 
     <a href="{{ path('app_articles_index') }}">back to list</a>
+
 
     <a href="{{ path('app_articles_edit', {'id': article.id}) }}">edit</a>
 

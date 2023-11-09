@@ -18,3 +18,6 @@ app_register:
 app_logout:
   path: "/logout"
   controller: 'App\Controller\SecurityController::logout'
+# app_articles_show:
+#   path: "/article/{id}"
+#   controller: 'App\Controller\ArticleController::show'

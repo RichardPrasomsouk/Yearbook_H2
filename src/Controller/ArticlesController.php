@@ -53,9 +53,27 @@ class ArticlesController extends AbstractController
     #[Route('/{id}', name: 'app_articles_show', methods: ['GET'])]
     public function show(Articles $article): Response
     {
-        return $this->render('articles/show.html.twig', [
-            'article' => $article,
-        ]);
+    $blockList = [];
+    
+    foreach (['quote', 'paragraph', 'imageEdge', 'imageSide'] as $blockType) {
+    $method = "get" . ucfirst($blockType) . "s";
+    $blockList[] = ['type' => $blockType, 'blocks' => $article->$method()];
+    }
+    
+    $blockSequence = [];
+    foreach($blockList as $blockTypeCollection) {
+    $blockArray = ($blockTypeCollection['blocks'])->toArray();
+
+    foreach ($blockArray as $block) {
+    $component = $this->renderView("_partials/{$blockTypeCollection['type']}.html.twig", ['block' => $block]);
+    $blockSequence[$block->getBlockOrder()] = $component;
+    }
+    }
+    
+    return $this->render('articles/show.html.twig', [
+    'article' => $article,
+    'contentParts' => $blockSequence,
+    ]);
     }
 
     #[Route('/{id}/edit', name: 'app_articles_edit', methods: ['GET', 'POST'])]

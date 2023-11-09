@@ -56,7 +56,7 @@ class Articles
     #[ORM\OneToMany(mappedBy: 'link', targetEntity: LinkedDocuments::class)]
     private Collection $linkedDocuments;
 
-    #[ORM\ManyToMany(targetEntity: Authors::class, mappedBy: 'written_articles')]
+    #[ORM\ManyToMany(targetEntity: Authors::class, inversedBy: 'written_articles')]
     private Collection $authors;
 
     #[ORM\OneToMany(mappedBy: 'article', targetEntity: Quote::class)]
@@ -333,28 +333,6 @@ class Articles
     public function getParagraphs(): Collection
     {
         return $this->paragraphs;
-    }
-
-    public function addParagraph(Paragraph $paragraph): static
-    {
-        if (!$this->paragraphs->contains($paragraph)) {
-            $this->paragraphs->add($paragraph);
-            $paragraph->setArticle($this);
-        }
-
-        return $this;
-    }
-
-    public function removeParagraph(Paragraph $paragraph): static
-    {
-        if ($this->paragraphs->removeElement($paragraph)) {
-            // set the owning side to null (unless already changed)
-            if ($paragraph->getArticle() === $this) {
-                $paragraph->setArticle(null);
-            }
-        }
-
-        return $this;
     }
 
     /**

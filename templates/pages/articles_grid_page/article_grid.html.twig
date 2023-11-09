@@ -2,43 +2,41 @@
 
 {% block body %}
 
-<div class = "grid-article-large-card-container">
-<div class = "article-large-card__title-container">
-<h1 class="article-large-card__maintitle">Les Derniers articles</h1>
-<h3 class="article-large-card__sub-title">Voir plus →</h3>
-</div>
-<div class = "article-large-card-container--row">
+<div class="grid-article-large-card-container">
+    <div class="article-large-card__title-container">
+        <h1 class="article-large-card__maintitle">Les Derniers articles</h1>
+        <h3 class="article-large-card__sub-title">Voir plus →</h3>
+    </div>
+    <div class="article-large-card-container--row">
 
-{% for article in articles %}
-
- <div class = "article-large-card">
-    <img src="{{ asset('images/'~ (article.pictures ? article.pictures : 'meeting.jpg' )) }}"
-    class="article-large-card__img"
-    alt="article-card-img"/>
-    <div class = "article-large-card__timer-container">
-    <span class="article-large-card__category">{{ article.category | upper }}</span>
-    <div class = "article-large-card__timer">
-        <img src="{{ asset('images/timer.svg') }}"
-    class="article-large-card__timer-img"
-    alt="article__card-img"/>
-    <span class="article-large-card__minutes">{{ article.readingEstimationTime }} MIN</span>
+        {% for article in articles %}
+        <a href="{{ path('app_articles_show', {'id': article.id}) }}" class="article-link">
+            <div class="article-large-card">
+                <img src="{{ asset('images/'~ (article.pictures ? article.pictures : 'meeting.jpg' )) }}"
+                    class="article-large-card__img" alt="article-card-img" />
+                <div class="article-large-card__timer-container">
+                    <span class="article-large-card__category">{{ article.category | upper }}</span>
+                    <div class="article-large-card__timer">
+                        <img src="{{ asset('images/timer.svg') }}" class="article-large-card__timer-img"
+                            alt="article__card-img" />
+                        <span class="article-large-card__minutes">{{ article.readingEstimationTime }} MIN</span>
+                    </div>
+                </div>
+                <div class="article-large-card__text-container">
+                    <div class="article-large-card__text">
+                        <h3 class="article-large-card__title">{{ article.title }}</h3>
+                        <h4>Par
+                            {% for author in article.authors %}
+                            {{ author.authorFirstName}} {{ author.authorLastName}}
+                            {% endfor %}
+                        </h4>
+                        <h5>{{ article.createdAt ? article.createdAt|date('d/m/Y') : '' }}</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
     </div>
-    </div>
-    <div class = "article-large-card__text-container">
-    <div class = "article-large-card__text">
-    <h3 class="article-large-card__title">{{ article.title }}</h3>
-     <h4>Par 
-     {% for author in article.authors %}
-     {{ author.authorFirstName}} {{ author.authorLastName}}
-     {% endfor %}
-     </h4>
-     <h5>{{ article.createdAt ? article.createdAt|date('d/m/Y') : '' }}</h5>
-    </div>
-    </div>
- </div>
-
- {% endfor %}
- </div>
 </div>
 
 {% endblock %}
