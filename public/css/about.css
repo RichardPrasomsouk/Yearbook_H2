@@ -155,6 +155,50 @@ div.marge-about{
         margin-right: 80px;
     }
 
+    div.bloc__quote-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 80px 72px 80px 72px;
+    }
+
+    img.image__quote-about {
+        width: 584px;
+        height: 560px;
+        border-radius: 0px 20px 0px 20px;
+    }
+
+    div.paragraphe__quote {
+        width: 576px;
+        height: 560px;
+        border-radius: 0px 20px 20px 0px;
+        background-color: #eafae9;
+    }
+
+    img.logo__quote {
+        margin-top: 187px;
+        margin-left: 42px;
+        width: 105px;
+        height: 66px;
+    }
+
+    p.texte__quote {
+        font-family: 'BwGradualDEMO';
+        font-size: 24px;
+        line-height: 31.2px;
+        margin-top: -24px;
+        margin-left: 116px;
+    }
+
+    p.auteur__quote {
+        font-family: 'SoleilRegular';
+        font-size: 20px;
+        line-height: 20.8px;
+        margin-top: 59px;
+        margin-left: 434px;
+        margin-right: 42px;
+    }
+
     div.bloc__equipe-about {
         margin-top: 80px;
         margin-bottom: 80px;
@@ -356,6 +400,50 @@ div.marge-about{
 
     div.bloc_2_texte__paragraphe-about {
         margin-right: 80px;
+    }
+
+    div.bloc__quote-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 80px 0px 80px 0px;
+    }
+
+    img.image__quote-about {
+        width: 40.556vw;
+        height: 38.889vw;
+        border-radius: 0px 20px 0px 20px;
+    }
+
+    div.paragraphe__quote {
+        width: 40vw;
+        height: 38.889vw;
+        border-radius: 0px 20px 20px 0px;
+        background-color: #eafae9;
+    }
+
+    img.logo__quote {
+        margin-top: 12.986vw;
+        margin-left: 2.917vw;
+        width: 105px;
+        height: 66px;
+    }
+
+    p.texte__quote {
+        font-family: 'BwGradualDEMO';
+        font-size: 24px;
+        line-height: 31.2px;
+        margin-top: -24px;
+        margin-left: 116px;
+    }
+
+    p.auteur__quote {
+        font-family: 'SoleilRegular';
+        font-size: 20px;
+        line-height: 20.8px;
+        margin-top: 59px;
+        margin-left: 25.139vw;
+        margin-right: 42px;
     }
 
     div.bloc__equipe-about {
