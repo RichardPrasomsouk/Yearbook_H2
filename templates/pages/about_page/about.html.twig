@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+  <div class="bloc__article-about">
+    <div class="titre__article-about__bloc">
+      <p class="titre__article-about">Page Yearbook</p>
+      <p class="sous-titre__article-about">Le Collectif et son identité</p>
+    </div>
+    <div class="texte-titre__article-about__container">
+      <p class="texte-titre__article-about">En éditant la veille technologique des étudiants et en leur permettant de rencontrer des personnes référentes du secteur, le YB fait un compte-rendu écrit des transformations numériques, au plus près des réalités en entreprises.</p>
+    </div>
+    <p class="sous-texte-titre__article-about">Par des Héticiens, Pour les Héticiens</p>
+    <div class="bloc__stylise__article-about">
+      <p class="texte-stylise__article-about">Yearbook</p>
+      <p class="texte-stylise__article-about">Yearbook</p>
+      <p class="texte-stylise__article-about">Yearbook</p>
+    </div>
+  </div>
+  <p class="titre__bloc-paragraphe-about">LA MISSION DU YEARBOOK ?</p>
+  <div class="bloc__paragraphe-about">
+    <img class="image__paragraphe-about" src="{{ asset('images/about-gens.png')}}">
+    <div class="bloc__texte__paragraphe-about">
+      <p class="texte__paragraphe-about">Le Yearbook est un collectif ouvert rassemblant des étudiants, des intervenants et des alumni qui rédigent des articles (écrits-vidéo-audio).</p>
+      <p class="texte__paragraphe-about">Les contenus sont publiés sur le site HETIC Yearbook et une sélection est imprimée une fois par an.</p>
+      <p class="texte__paragraphe-about">Les articles sont de nature variée : interviews de personnes ayant des positions importantes dans le numérique, tribunes d’intervenants sur leur pratique professionnelle, témoignages d’Héticien-ne-s, portraits d’étudiant-e-s qui se découvrent entre eux (inter-promo) au travers de dispositifs pédagogiques.</p>
+    </div>
+  </div>
+  <div class="bloc_2_paragraphe-about">
+    <div class="bloc_2_texte__paragraphe-about">
+      <p class="texte__paragraphe-about">En réalisant ce journal annuel de l’école, les étudiant-e-s, inventent de nouvelles façon d’éditer un média. Dans la captation des contenus, leur transcription, la direction artistique ou la mise en page, parce qu’ils ont la maîtrise des outils innovants de la tech, ils inventent des outils pour le faire plus vite. C’est la force de ce média : efficace et pertinent.</p>
+      <p class="texte__paragraphe-about">Entièrement au libre choix des étudiants, le Yearbook permet de rencontrer «n’importe qui dans le métier» avec l’alibi d’une interview, c’est un levier puissant de responsabilisation dans le parcours d’apprentissage. Autonomisation et responsabilisation sont deux objectifs majeurs d’un parcours réussi à HETIC.</p>
+    </div>
+    <img class="image__paragraphe-about" src="{{ asset('images/about-bureau.png')}}">
+  </div>
+  <div class="bloc__equipe-about">
+    <div class="texte_equipe-about">
+      <p class="texte__equipe premier__texte__equipe"><b>Marie René</b>, Bachelor développement Web 1, rédactrice<br><b>Marie-Gwenaëlle Fahem</b>, Bachelor développement Web 1, rédactrice<br><b>Victor Huang</b>, Bachelor développement Web 1, Communication<br><b>Clément Phlipponeau</b>, Bachelor développement Web 1, Communication<br><b>Lucas Rimbault</b>, Bachelor développement Web 1, rédactrice</p>
+      <p class="texte__equipe deuxieme__texte__equipe"><b>Lucas Rimbault</b>, Bachelor développement Web 1, rédactrice<br><b>Charles Pom</b>, Bachelor développement Web 1, Designer<br><b>Evan Thomas</b>, Programme Grande Ecole 3, Designer<br><b>Noé Meunier</b>, Programme Grande Ecole 3, Designer<br><b>Patxi Manzano</b>, Programme Grande Ecole 3, Designer</p>
+      <img class="image__equipe__1" src="{{ asset('images/about-photo.png')}}">
+    </div>
+
+    
+
+    <div class="texte_equipe-about">
+      <p class="texte__equipe troisieme__texte__equipe"><b>Lucas Boucher</b>, Programme Grande Ecole 3, Chef de projet & rédacteur<br><b>Maedeh Farahani</b>, Bachelor développementWeb 3, Photographe<br><b>Théa Bouhanna</b>, Programme Grande Ecole 2, rédactrice<br><b>Dorian Richard</b>, Programme Grande Ecole 2, rédacteur<br><b>Valentin Poussou</b>, Prépa Mastère Digitale, rédacteur</p>
+      <img class="image__equipe__1 premier__image__equipe" src="{{ asset('images/about-hackaton.png')}}">
+      <img class="image__equipe__2" src="{{ asset('images/about-tempete.png')}}">
+    </div>
+    <div class="texte_equipe-about">
+      <img class="image__equipe__1 deuxieme__image__equipe" src="{{ asset('images/about-ordi-gens.png')}}">
+      <p class="texte__equipe quatrieme__texte__equipe"><b>Govinda Agbahe</b>, Bachelor développement Web 1, rédacteur<br><b>Foguette N’Gabié</b>, Prépa Mastère Digitale, rédactrice<br><b>Pierre Clerc</b>, Programme Grande Ecole 4, rédacteur et IA<br><b>Christophe Francisco</b>, Programme Grande Ecole 4, rédacteur<br><b>Sabrina Attos</b>, Bachelor développement Web 1, rédactrice</p>
+      <p class="texte__equipe nom__equipe">L’EQUIPE YEARBOOK</p>
+    </div>
+    <div class="texte_equipe-about">
+      <img class="image__equipe__2 troisieme__image__equipe" src="{{ asset('images/about-michel.png')}}">
+      <img class="image__equipe__1 quatrieme__image__equipe" src="{{ asset('images/about-interview.png')}}">
+      <p class="texte__equipe"><b>Benjamin Schinkel</b>, Bachelor développement Web 1, rédacteur<br><b>Vincent Rodriguez</b>, Bachelor marketing et UX Design 1, Photographe et vidéaste<br><b>Frederic Martinez</b>, Intervenant, Design graphique</p>
+    </div>
+  </div>
+
+{% include 'pages/landing_page/article_grid_3_by_3_cards_about.html.twig' %}
+
+<div class="marge-about"></div>
+
+</body>
+
+{% endblock %}

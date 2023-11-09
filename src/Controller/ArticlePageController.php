@@ -77,4 +77,13 @@ public function video(ArticlesRepository $articlesRepository): Response
         'articles' => $articles,
     ]);
 }
+
+#[Route('/about', name: 'app_about_page')]
+    public function about(ArticlesRepository $articlesRepository): Response
+    {
+        return $this->render('pages/about_page/about.html.twig', [
+            'articles' => $articlesRepository->findAll(),
+        ]);
+    }
+
 }
