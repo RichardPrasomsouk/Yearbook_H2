@@ -1,0 +1,433 @@
+@font-face {
+    font-family: 'BwGradualDEMO';
+    src: url('../fonts/BwGradualDEMO-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BwGradualDEMORegular';
+    src: url('../fonts/BwGradualDEMO-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SoleilRegular';
+    src: url('../fonts/SoleilRegular.otf') format('opentype');
+}
+
+body {
+    margin: 0px 68px 0px 68px;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+div.marge-about{
+    margin-bottom: 80px;
+}
+
+@media screen and (min-width: 1387px) {
+
+    div.bloc__article-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.titre__article-about__bloc {
+        text-align: center;
+        margin-top: 160px;
+        margin-bottom: 80px;
+    }
+
+    p.titre__article-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 78px;
+        line-height: 56.6px;
+        padding-bottom: 32px;
+    }
+
+    p.sous-titre__article-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 78px;
+        line-height: 56.6px;
+    }
+
+    div.texte-titre__article-about__container {
+        width: 595px;
+        height: 100px;
+    }
+
+    p.texte-titre__article-about {
+        font-family: 'SoleilRegular';
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #666666
+    }
+
+    p.sous-texte-titre__article-about {
+        font-family: 'SoleilRegular';
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    div.bloc__stylise__article-about {
+        margin-top: 70px;
+    }
+
+    .texte-stylise__article-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 120px;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #2dcc1f;
+        text-shadow: -24px -11px 0px #eafae9;
+        margin: 0;
+    }
+
+    .texte-stylise__article-about + .texte-stylise__article-about {
+        margin-top: -50px;
+    }
+
+    .texte-stylise__article-about:nth-child(1) {
+        margin-left: 80px;
+    }
+
+    .texte-stylise__article-about:nth-child(2) {
+        margin-left: -30px;
+    }
+
+    .texte-stylise__article-about:nth-child(3) {
+        margin-left: 80px;
+    }
+
+    p.titre__bloc-paragraphe-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 48px;
+        line-height: 57.6px;
+        margin-top: 140px;
+        margin-bottom: 60px;
+    }
+
+    div.bloc__paragraphe-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img.image__paragraphe-about {
+        width: 652px;
+        height: 448px;
+        border-radius: 10px;
+    }
+
+    div.bloc__texte__paragraphe-about {
+        margin-left: 130px;
+    }
+
+    p.texte__paragraphe-about {
+        font-family: 'SoleilRegular';
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 2px;
+    }
+
+    .texte__paragraphe-about:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    .texte__paragraphe-about:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    div.bloc_2_paragraphe-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    div.bloc_2_texte__paragraphe-about {
+        margin-right: 80px;
+    }
+
+    div.bloc__equipe-about {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    div.texte_equipe-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 80px;
+    }
+
+    p.texte__equipe {
+        width: 296px;
+        height: 221px;
+        font-family: 'BwGradualDEMORegular';
+        font-size: 16px;
+        line-height: 20px;
+        display: inline-block;
+    }
+
+    p.premier__texte__equipe {
+        margin-right: 264px;
+    }
+
+    p.deuxieme__texte__equipe {
+        margin-right: 40px;
+    }
+
+    p.troisieme__texte__equipe {
+        margin-right: 299px;
+    }
+
+    img.image__equipe__1 {
+        width: 408px;
+        height: 221px;
+        border-radius: 20px;
+    }
+
+    img.premier__image__equipe {
+        margin-right: 80px;
+    }
+
+    img.deuxieme__image__equipe {
+        margin-right: 37px;
+    }
+
+    p.nom__equipe {
+        font-family: 'BwGradualDEMO';
+        font-size: 48px;
+        line-height: 57.6px;
+    }
+
+    img.image__equipe__2 {
+        width: 221px;
+        height: 221px;
+        border-radius: 20px;
+    }
+
+    p.quatrieme__texte__equipe {
+        margin-right: 297px;
+    }
+
+    img.troisieme__image__equipe {
+        margin-right: 339px;
+    }
+
+    img.quatrieme__image__equipe {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 1386px) {
+
+    div.bloc__article-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.titre__article-about__bloc {
+        text-align: center;
+        margin-top: 160px;
+        margin-bottom: 80px;
+    }
+
+    p.titre__article-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 78px;
+        line-height: 56.6px;
+        padding-bottom: 32px;
+    }
+
+    p.sous-titre__article-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 78px;
+        line-height: 66px;
+    }
+
+    div.texte-titre__article-about__container {
+        width: 595px;
+        height: 100px;
+    }
+
+    p.texte-titre__article-about {
+        font-family: 'SoleilRegular';
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #666666
+    }
+
+    p.sous-texte-titre__article-about {
+        font-family: 'SoleilRegular';
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    div.bloc__stylise__article-about {
+        margin-top: 70px;
+    }
+
+    .texte-stylise__article-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 120px;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #2dcc1f;
+        text-shadow: -24px -11px 0px #eafae9;
+        margin: 0;
+    }
+
+    .texte-stylise__article-about + .texte-stylise__article-about {
+        margin-top: -50px;
+    }
+
+    .texte-stylise__article-about:nth-child(1) {
+        margin-left: 80px;
+    }
+
+    .texte-stylise__article-about:nth-child(2) {
+        margin-left: -30px;
+    }
+
+    .texte-stylise__article-about:nth-child(3) {
+        margin-left: 80px;
+    }
+
+    p.titre__bloc-paragraphe-about {
+        font-family: 'BwGradualDEMO';
+        font-size: 48px;
+        line-height: 57.6px;
+        margin-top: 140px;
+        margin-bottom: 60px;
+    }
+
+    div.bloc__paragraphe-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img.image__paragraphe-about {
+        width: 45.278vw;
+        height: 31.111vw;
+        border-radius: 10px;
+    }
+
+    div.bloc__texte__paragraphe-about {
+        margin-left: 130px;
+    }
+
+    p.texte__paragraphe-about {
+        font-family: 'SoleilRegular';
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 2px;
+    }
+
+    .texte__paragraphe-about:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    .texte__paragraphe-about:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    div.bloc_2_paragraphe-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    div.bloc_2_texte__paragraphe-about {
+        margin-right: 80px;
+    }
+
+    div.bloc__equipe-about {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    div.texte_equipe-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 80px;
+    }
+
+    p.texte__equipe {
+        width: 296px;
+        height: 221px;
+        font-family: 'BwGradualDEMORegular';
+        font-size: 16px;
+        line-height: 20px;
+        display: inline-block;
+    }
+
+    p.premier__texte__equipe {
+        margin-right: 40px;
+    }
+
+    p.deuxieme__texte__equipe {
+        margin-right: 20px;
+    }
+
+    p.troisieme__texte__equipe {
+        margin-right: 40px;
+    }
+
+    img.image__equipe__1 {
+        width: 28.333vw;
+        height: 15.347vw;
+        border-radius: 20px;
+    }
+
+    img.premier__image__equipe {
+        margin-right: 80px;
+    }
+
+    img.deuxieme__image__equipe {
+        margin-right: 40px;
+    }
+
+    p.nom__equipe {
+        font-family: 'BwGradualDEMO';
+        font-size: 48px;
+        line-height: 57.6px;
+    }
+
+    img.image__equipe__2 {
+        width: 15.347vw;
+        height: 15.347vw;
+        border-radius: 20px;
+    }
+
+    p.quatrieme__texte__equipe {
+        margin-right: 40px;
+    }
+
+    img.troisieme__image__equipe {
+        margin-right: 200px;
+    }
+
+    img.quatrieme__image__equipe {
+        margin-right: 40px;
+    }
+}
