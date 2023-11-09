@@ -48,6 +48,7 @@
   left: 0;
   width: 100%;
   transition: top 0.5s; /* Animation pour déplacer le menu */
+  margin-top: 13px;
 }
 
 .header__burger-menu.open ~ .header__pop-up-menu {
