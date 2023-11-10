@@ -12,7 +12,7 @@
         {% for article in articles %}
         <a href="{{ path('app_articles_show', {'id': article.id}) }}" class="article-link">
             <div class="article-large-card">
-                <img src="{{ asset('images/'~ (article.pictures ? article.pictures : 'meeting.jpg' )) }}"
+                <img src="{{ asset('images/'~ (article.pictures ? article.pictures : 'brontis.jpg' )) }}"
                     class="article-large-card__img" alt="article-card-img" />
                 <div class="article-large-card__timer-container">
                     <span class="article-large-card__category">{{ article.category | upper }}</span>
