@@ -1,6 +1,8 @@
 .grid-article-card-container {
     display: flex;
     flex-direction: column;
+    margin-right: 68px;
+    margin-left: 68px;
   }
   
   .article-card-container--row {

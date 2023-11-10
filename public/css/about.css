@@ -13,7 +13,7 @@
     src: url('../fonts/SoleilRegular.otf') format('opentype');
 }
 
-body {
+.body-about {
     margin: 0px 68px 0px 68px;
     padding: 0;
 }
