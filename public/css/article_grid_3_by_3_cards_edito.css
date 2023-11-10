@@ -1,0 +1,112 @@
+.grid-article-card-edito-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 68px;
+    margin-left: 68px;
+    margin-bottom: 60px;
+  }
+  
+  .article-card-edito-container--row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .article-card-edito__title-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    /* padding-left: 68px;
+    padding-right: 68px; */
+  
+  }
+  .article-card-edito {
+    width: 408px;
+    height: 100% auto;
+    background-color: rgba(var(--purple), var(--opacity-3)); 
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .article-card-edito__img {
+    display: flex;
+    border-radius: 20px;
+  }
+  .article-card-edito__timer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .article-card-edito__timer-img {
+    padding-right: 5px;
+  }
+  .article-card-edito__category {
+    width: auto;
+    height: auto;
+    background-color: rgba(var(--purple), var(--opacity-1));
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  span.article-card-edito__category {
+    font-family: "soleil", sans-serif;
+    font-size: 12px;
+    color: white;
+  }
+  span.article-card-edito__minutes{
+    font-family: "soleil", sans-serif;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+  }
+  .article-card-edito__timer {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+  }
+  
+  
+  .article-card-edito__text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  H3.article-card-edito__title {
+    font-family: "BwGradualDEMO", sans-serif;
+    font-size: 20px;
+    font-weight:normal;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+    
+  H5.article-card-edito__text {
+    opacity: 60%;
+  }
+  @media screen and (max-width: 1380px) {
+    .article-card-edito-container--row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    }
+  
+    @media screen and (max-width: 840px) {
+      .article-card-edito__timer-img {
+        width: 100% auto;
+        height: 100% auto;
+      }
+    }
+  
+  
