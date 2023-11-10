@@ -1,6 +1,7 @@
 .grid-article-large-card-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
 }
 
 .article-large-card-container--row {

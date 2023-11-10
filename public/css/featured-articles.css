@@ -14,6 +14,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover ; 
+  margin-bottom: 60px;
 }
 
 .article-cover__bottom-right-card {
@@ -52,7 +53,7 @@
   width: 110px;
 }
 
-.tag {
+.article-cover__tag {
   color: white;
   font-family: 'BwGradualDEMO';
   font-size: 12px;
